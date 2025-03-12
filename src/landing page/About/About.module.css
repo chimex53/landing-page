@@ -1,0 +1,52 @@
+
+/* about */
+.About{
+    background-color: #e3e3e3;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+  }
+  .AboutContent{
+    flex: 1;
+    padding-right: 20px;
+  }
+  .AboutContent h1{
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -50px;
+    position: relative;
+  }
+
+  .AboutContent h1::after {
+    content: ""; /* Required to make the pseudo-element appear */
+    display: block; /* Makes the pseudo-element a block-level element */
+    width: 20%; /* You can adjust the width of the line as needed */
+    height: 1px; /* Thickness of the line */
+    background-color: orangered; /* Line color */
+   
+    margin: 10px auto 0; /* Centers the line and adds some space between the text and the line */
+}
+  .AboutContent #AboutText{
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+    font-family: 12px;
+  }
+  .AboutImage{
+    flex: 1;
+  }
+  .AboutImage img{
+    width: 100%;
+  max-width: 100%;
+  height: auto;
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .AboutImage img:hover{
+    transform: scale(1.03);
+  }
