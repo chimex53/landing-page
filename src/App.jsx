@@ -5,6 +5,7 @@ import Footer from "./landing page/Footer/Footer";
 import Header from "./landing page/Header/Header";
 import Home from "./landing page/Home/Home";
 import Menu from "./landing page/Menu/Menu";
+import Services from "./landing page/Services/Services";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Home />
       <About />
+      <Services />
       <Menu />
       <Contact />
       <Footer />

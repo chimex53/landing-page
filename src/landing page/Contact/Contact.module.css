@@ -1,14 +1,14 @@
-
+/* contact container */
 .ContactContainer {
     background-color: #f2f2f2;
     display: flex;
-    gap: 70px;
+ gap: 70px;
     align-items: center;
-    flex-shrink: 1;
-
     padding: 20px; 
-}
+   
 
+}
+ /* contact container image */
 .ContactContainer img {
     width: 50%;
     object-fit: cover;
@@ -16,6 +16,7 @@
  
 }
 
+  /* contact heading */
 .ContactContainer h1 {
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -31,11 +32,12 @@
     background-color: orangered;
     margin: 10px auto 0;
     margin-bottom: 0;
-
 }
+/* inputs styling */
+
 input,
 textarea {
-    min-width: 300px;
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -44,6 +46,7 @@ textarea {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* button style */
 .SubmitBtn {
     width: 100%;
     border-radius: 5px;
@@ -51,7 +54,6 @@ textarea {
     background-color: #333;
     color: #f2f2f2;
     padding: 5px;
-    margin: 10px auto 5px;
     display: block;
 }
 
@@ -75,7 +77,7 @@ p {
 }
 
 .socialIcons img {
-    height: 20px;
+    height: 5%;
     border-radius: 50%;
     transition: 0.3s ease;
     width: 20px;
@@ -85,23 +87,96 @@ p {
     transform: translateY(-5px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 401px) { /* Between 401px and 768px */
     .ContactContainer {
         flex-direction: column;
         align-items: center;
     }
-
     .formGroup {
-        width: 100%; 
-
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px;
     }
-
+    .SubmitBtn {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
     .ContactContainer img {
-        width: 100%; 
+        width: 80%;
     }
-
-    .socialIcons img{
+    .socialIcons img {
         width: 10px;
         height: 10px;
     }
 }
+
+@media (max-width: 400px) { /* Below 400px */
+    .ContactContainer {
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+        width: 100%;
+    }
+    .ContactContainer img {
+        width: 80%;
+    }
+    .formGroup {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .SubmitBtn {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

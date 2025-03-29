@@ -1,117 +1,94 @@
+/* Nav container */
+nav {
+  display: flex;
+  justify-content: space-between; /* Space between h3 and ul */
+  align-items: center; /* Align vertically in the center */
+  width: 100%;
+  background-color: #333;
+  position: fixed;
+  z-index: 999;
+  padding: 20px;
+}
 
-header{
+/* Heading */
+nav h3 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: orangered;
+  margin-left: 5px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+/* Menu items */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+  display: flex;
+}
+
+nav a:hover {
+  border-bottom: 2px solid orangered;
+  transform: translateY(-5px);
+}
+
+/* Hamburger icon styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Mobile menu styling */
+@media (max-width: 768px) {
+  /* Hide the menu links by default on mobile */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
     background-color: #333;
-    padding: 10px 0;
-    top: 0;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    width: 100%;
-  
-  }
-  section{
-   margin-top: 60px;
-  }
-  nav ul{
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
-  }
-  
-  nav ul li{
-    margin: 0 15px;
-  }
-  
-  nav a{
-    text-decoration: none;
-    color: #ffffff;
-    text-transform: capitalize;
-    transition: 0.3s ease-in-out;
-  }
-  
-  nav a:hover{
-  
-    border-bottom: 2px solid orangered;
-  }
-  
-  nav h3 {
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: orangered;
-    margin-left: 5px;
-    text-transform: uppercase;
-    transition: 0.3s ease-in-out;
-  
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    height: 400px;
+    line-height: 3;
+    border-bottom-left-radius: 20px;
+   
   }
 
-  nav h3:hover{
-    color: #ffffff;
+  /* Show the hamburger icon */
+  .hamburger {
+    display: flex;
   }
- 
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav ul li {
-      margin: 10px 0;
-    }
+
+  /* Display the menu when it's open */
+  nav ul.open {
+    display: flex;
   }
-  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+}

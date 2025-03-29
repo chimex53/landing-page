@@ -1,60 +1,81 @@
-import facebook from "../../assets/facebook.png";
-import Github from "../../assets/Github.png";
-import x from "../../assets/x.png";
-import instagram from "../../assets/instagram.png";
-import whatsapp from "../../assets/whatsapp.png";
-import linkedln from "../../assets/linkedln.png";
-import contact1 from "../../assets/contact1.jpg";
 import styles from "./Contact.module.css";
+import contact1 from "../../assets/contact1.jpg";
 import { useState } from "react";
+import Social from "../social/Social";
 
+const initialFormValues = {
+  email: "",
+  lastName: "",
+  firstName: "",
+  message: "",
+};
 const Contact = () => {
-  const [firstName, setFirstName] = useState("ugwu");
+  const [formValues, setFormValues] = useState(initialFormValues);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues((prev) => ({ ...prev, [name]: value })); // for retaining state previous data
+  };
+
+  // function to handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted", formValues);
+    setFormValues(initialFormValues); // Optionally reset the form
+  };
+
   return (
     <section id="contact">
       <div className={styles.ContactContainer}>
         <img src={contact1} alt="" />
         <div className={styles.formGroup}>
           <h1>contact us</h1>
-
-          <form action="">
+          <form action="" onSubmit={handleSubmit}>
             <input
               type="text"
-              id="name"
+              id="Fname"
               placeholder="First Name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              value={formValues.firstName}
+              onChange={handleChange}
+              name="firstName"
+              required
             />
             <br />
-            <input type="text" id="name" placeholder="Last Name" />
+            <input
+              type="text"
+              id="Lname"
+              placeholder="Last Name"
+              value={formValues.lastName}
+              onChange={handleChange}
+              name="lastName"
+              required
+            />
             <br />
-
-            <input type="email" id="name" placeholder="Email" />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              value={formValues.email}
+              onChange={handleChange}
+              name="email"
+              required
+            />
             <br />
-
-            <input type="number" id="name" placeholder="Phone Number" />
-            <br />
-
             <textarea
-              name=""
-              id=""
+              name="message"
+              id="message"
               rows={7}
               cols={30}
-              placeholder="Comment"
+              placeholder="message"
+              value={formValues.message}
+              onChange={handleChange}
+              required
             ></textarea>
             <br />
-            <button className={styles.SubmitBtn}>submit</button>
+            <button className={styles.SubmitBtn}>send message</button>
             <p> reach us on the following social media handles.</p>
             <br />
-            <div className={styles.socialIcons}>
-              <img src={facebook} alt="" />
-              <img src={Github} alt="" />
-              <img src={x} alt="" />
-              <img src={instagram} alt="" />
-              <img src={linkedln} alt="" />
-              <img src={whatsapp} alt="" />
-            </div>
           </form>
+          <Social />
         </div>
       </div>
     </section>

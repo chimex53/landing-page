@@ -5,11 +5,18 @@
 }
 html{
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 
 }
 body{
   font-family: sans-serif;
   background-color: #f2f2f2;
+
 }
 
-
+img{
+  max-width: 100%;
+  height: auto;
+  aspect-ratio:  16/9;
+  object-fit: cover;
+}

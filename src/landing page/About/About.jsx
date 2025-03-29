@@ -3,19 +3,18 @@ import styles from "./About.module.css";
 const About = () => {
   return (
     <div>
-      <section id="About">
+      <section id="about">
         <div className={styles.About}>
           <div className={styles.AboutContent}>
             <h1>about us</h1>
             <p id={styles.AboutText}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              doloribus blanditiis perferendis consectetur, cupiditate tenetur
-              saepe dolores quae! Numquam reprehenderit possimus reiciendis
-              error praesentium harum sed nam, assumenda repellat molestias!
-              Amet veniam expedita recusandae sint consequuntur quasi soluta.
-              Sapiente rem alias, modi, quidem quis ea laborum deleniti, natus
-              repudiandae eaque iusto illo neque vitae ratione iure aperiam
-              numquam et sint!
+              Welcome to Ngo Best Catering! We specialize in creating memorable
+              dining experiences with delicious, customized menus for any
+              occasion. Whether it's a wedding, corporate event, or intimate
+              gathering, our talented chefs use only the freshest ingredients to
+              deliver exceptional food, while our dedicated team ensures
+              top-notch service. At Ngo Best Catering, we believe food should be
+              an experience, and we’re here to make yours unforgettable.
             </p>
           </div>
           <div className={styles.AboutImage}>

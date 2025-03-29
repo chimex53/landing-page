@@ -1,47 +1,25 @@
 import styles from "./Menu.module.css";
-import menu1 from "../../assets/menu1.jpg";
-import menu2 from "../../assets/menu2.jpg";
-import menu3 from "../../assets/menu3.jpeg";
-import menu4 from "../../assets/menu4.jpg";
+import productMenu from "./Data";
 const Menu = () => {
   return (
     <div>
       <section id="menu">
-        <div className={styles.title}>
+        <div className={styles.menuTitle}>
           <h1>Menu</h1>
         </div>
-        <div className={styles.servicesContainer}>
-          <div className={styles.servicesItems}>
-            <img src={menu1} alt="" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-              labore expedita a ab alias, consequuntur similique praesentium ex
-            </p>
-          </div>
-          <div className={styles.servicesItems}>
-            <img src={menu2} alt="" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-              labore expedita a ab alias, consequuntur similique praesentium ex
-            </p>
-          </div>
-          <div className={styles.servicesItems}>
-            {<img src={menu3} alt="" />}
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-              labore expedita a ab alias, consequuntur similique praesentium ex
-            </p>
-          </div>
-          <div className={styles.servicesItems}>
-            <img src={menu4} alt="" />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-              labore expedita a ab alias, consequuntur similique praesentium ex
-            </p>
-          </div>
+        <div className={styles.menuContainer}>
+          {productMenu.map((item) => (
+            <div key={item.id} className={styles.menuItems}>
+              {" "}
+              <img src={item.Image} alt={item.title} />
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
         </div>
       </section>
     </div>
   );
 };
+
 export default Menu;

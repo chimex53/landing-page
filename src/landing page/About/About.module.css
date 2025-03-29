@@ -6,6 +6,7 @@
    justify-content: space-between;
    align-items: center;
    padding: 20px;
+   max-height: 100vh;
   }
   .AboutContent{
     flex: 1;
@@ -31,8 +32,8 @@
     margin: 10px auto 0; /* Centers the line and adds some space between the text and the line */
 }
   .AboutContent #AboutText{
-    color: #666;
-    line-height: 1.6;
+    color: #343131;
+    line-height: 2;
     text-align: left;
     font-family: 12px;
   }
@@ -50,3 +51,35 @@
   .AboutImage img:hover{
     transform: scale(1.03);
   }
+  @media (max-width:480px){
+    .AboutContent h1{
+      color: orangered;
+      margin-top: 10px;
+    }
+    .AboutContent h1::after{
+      background-color: #333;
+    }
+    .AboutImage img{
+      width: 100%;
+      max-width: 90%;
+    }
+  }
+@media(max-width:768px) {
+
+  .About{
+    flex-direction: column;
+  }
+  .AboutContent h1{
+    margin-top: 20px;
+  }
+  .About img{
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.2em;
+  }
+
+  .AboutText{
+   overflow-wrap: break-word;
+    padding: 1.2em;
+  }
+}
