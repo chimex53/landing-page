@@ -7,7 +7,7 @@
     width: 100%;
     font-size: 14px;
     height: 10%;
-/*    position: absolute;*/
+    position: relative;
     padding-top: 2px;
     bottom: 0;
     clear: both;
