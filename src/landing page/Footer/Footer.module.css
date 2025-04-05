@@ -1,19 +1,18 @@
 
 .footer{
     background-color: #333;
-
     padding: 10px;
     text-align: center;
     text-transform: capitalize;
     width: 100%;
     font-size: 14px;
     height: 10%;
-    position: absolute;
+/*    position: absolute;*/
     padding-top: 2px;
     bottom: 0;
     clear: both;
     overflow: auto;
-    position: sticky;
+  
 }
 #footerTxt{
     color: #ffffff;
