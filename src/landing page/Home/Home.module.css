@@ -32,9 +32,10 @@
 
 .right p{
   font-size: 1rem;
-  color: #000000;
+  color: #ffff;
   margin: 0 auto;
   padding: 10px;
+  font-weight: 900;
 }
 .right a{
   text-decoration: none;

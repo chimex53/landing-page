@@ -75,7 +75,6 @@ const Contact = () => {
             <p> reach us on the following social media handles.</p>
             <br />
           </form>
-          <Social />
         </div>
       </div>
     </section>

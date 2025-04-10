@@ -1,6 +1,6 @@
 .socialIcons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 
 }
 
@@ -10,7 +10,7 @@
     transition: 0.3s ease;
     width: 20px;
     background-color: white;
- 
+ margin: 0 10px;
 }
 
 .socialIcons img:hover {

@@ -9,9 +9,7 @@
      margin-top: 20px;
      padding-bottom: 40px; /* Increased bottom padding */
      background-color: #fafafa
-   
   }
-  
   .menuItems{
     background-color: #fff;
     border-radius: 8px;
@@ -26,7 +24,6 @@
     border-bottom: 2px solid orangered;
     
   }
-  
   .menuItems:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -56,28 +53,22 @@
   .menuItems img{
     width: 100%;
     border-radius: 5px;
-   
   }
-
   #Services {
     padding: 20px;
   }
-  
   .menuContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-  
   .menuItems img {
     width: 100%;
     height: auto;
   }
-  
   .menuItems h3{
   justify-content: flex-start;
     text-transform: capitalize;
-
   }
   .menuItems p {
     text-align: center;
@@ -85,10 +76,17 @@
     padding: 10px 0;
     line-height: 1.5;
   }
-  
+
+  @media (min-width: 400px) {
+    .menuContainer {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 10px;
+    }
+  }
   @media (min-width: 768px) {
     .menuContainer {
       grid-template-columns: repeat(4, 1fr);
+      padding: 10px;
     }
   }
   
