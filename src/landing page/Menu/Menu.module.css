@@ -79,8 +79,7 @@
   }
 
   @media (min-width: 401px) {
-    .menuContainer {
-      grid-template-columns: repeat(2, 1fr);
+    .menuItems{
       padding: 10px;
     }
   }
